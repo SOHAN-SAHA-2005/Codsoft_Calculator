@@ -1,0 +1,97 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #00000094;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  width: 320px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #eee;
+  box-sizing: border-box; /* prevents overflow */
+  overflow-x: auto;       /* scroll if number too long */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+.btn {
+  height: 60px;
+  width: 60px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%;   /* round buttons */
+  background: #ddd;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  background: #bbb;
+}
+
+.operator {
+  background: #f9a825;
+  color: #fff;
+}
+
+.operator:hover {
+  background: #f57f17;
+}
+
+.equal {
+  background: #43a047;
+  color: white;
+}
+
+.equal:hover {
+  background: #2e7d32;
+}
+
+.clear {
+  background: #e53935;
+  color: white;
+  border-radius: 30px; /* pill shape */
+  width: 100%;
+  grid-column: span 2;
+}
+
+.clear:hover {
+  background: #c62828;
+}
+
+.delete {
+  background: #1e88e5;
+  color: white;
+  border-radius: 30px; /* pill shape */
+  width: 100%;
+  grid-column: span 2;
+}
+
+.delete:hover {
+  background: #1565c0;
+}
